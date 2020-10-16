@@ -223,6 +223,10 @@ class TFRecordDataset:
                 np.random.randint(self._np_labels.shape[0], size=[minibatch_size])
             ]
         return np.zeros([minibatch_size, 0], self.label_dtype)
+    
+    # Placeholder to close a dataset
+    def close(self):
+        pass
 
 # ----------------------------------------------------------------------------
 # Helper func for constructing a dataset object using the given options.
